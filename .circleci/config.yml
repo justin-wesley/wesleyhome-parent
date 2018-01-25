@@ -8,10 +8,9 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test:
-          context: org-global
 jobs:
   build:
+    context: org-global
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk
@@ -43,8 +42,6 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-  test:
-    steps:
       # run tests!
       - run: mvn -s .circleci.settings.xml deploy
 
