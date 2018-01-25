@@ -6,7 +6,7 @@
 
     <groupId>com.wesleyhome</groupId>
     <artifactId>parent</artifactId>
-    <version>2.0.0</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -102,7 +102,7 @@
         <repository>
             <id>bintray-justin-wesley-maven</id>
             <name>justin-wesley-maven</name>
-            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1%26override=1</url>
+            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1</url>
         </repository>
     </distributionManagement>
     <profiles>
