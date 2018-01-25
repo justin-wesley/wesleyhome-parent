@@ -6,10 +6,10 @@ version: 2
 workflows:
   version: 2
   build_and_test:
-  jobs:
-    - build
-    - test:
-      context: org-global
+    jobs:
+      - build
+      - test:
+        context: org-global
 jobs:
   build:
     docker:
