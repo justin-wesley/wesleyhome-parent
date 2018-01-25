@@ -93,6 +93,13 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>bintray-justin-wesley-maven</id>
+            <name>justin-wesley-maven</name>
+            <url>https://api.bintray.com/maven/justin-wesley/maven/${project.groupId}/${project.artifactId}/;publish=1</url>
+        </repository>
+    </distributionManagement>
     <profiles>
         <profile>
             <id>jdk8</id>
