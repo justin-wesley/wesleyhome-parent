@@ -102,7 +102,7 @@
         <repository>
             <id>bintray-justin-wesley-maven</id>
             <name>justin-wesley-maven</name>
-            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1</url>
+            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/</url>
         </repository>
     </distributionManagement>
     <profiles>
