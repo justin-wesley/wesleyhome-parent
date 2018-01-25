@@ -9,7 +9,7 @@ workflows:
     jobs:
       - build
       - test:
-        context: org-global
+          context: org-global
 jobs:
   build:
     docker:
