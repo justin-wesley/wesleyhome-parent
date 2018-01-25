@@ -95,8 +95,8 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>bintray-justin-wesley-maven</id>
-            <name>justin-wesley-maven</name>
+            <id>bintray-maven</id>
+            <name>bintray-maven</name>
             <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1</url>
         </repository>
     </distributionManagement>
