@@ -8,9 +8,9 @@ workflows:
   build_and_test:
     jobs:
       - build
+          context: org-global
 jobs:
   build:
-    context: org-global
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:9-jdk
