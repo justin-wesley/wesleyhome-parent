@@ -6,7 +6,7 @@
 
     <groupId>com.wesleyhome</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +23,12 @@
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
     </properties>
-
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
     <build>
         <pluginManagement>
             <plugins>
@@ -95,9 +100,9 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>bintray-maven</id>
-            <name>bintray-maven</name>
-            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1</url>
+            <id>bintray-justin-wesley-maven</id>
+            <name>justin-wesley-maven</name>
+            <url>https://api.bintray.com/maven/justin-wesley/maven/wesleyhome-parent/;publish=1%26override=1</url>
         </repository>
     </distributionManagement>
     <profiles>
@@ -107,7 +112,7 @@
                 <jdk>1.8</jdk>
             </activation>
             <properties>
-                <module.name />
+                <module.name/>
             </properties>
             <build>
                 <pluginManagement>
@@ -139,7 +144,9 @@
                                         <requireProperty>
                                             <property>module.name</property>
                                             <regex>[a-z]+[a-z.]*</regex>
-                                            <regexMessage>Module name must be specified and should only contain lowercase letters and periods</regexMessage>
+                                            <regexMessage>Module name must be specified and should only contain
+                                                lowercase letters and periods
+                                            </regexMessage>
                                         </requireProperty>
                                     </rules>
                                 </configuration>
