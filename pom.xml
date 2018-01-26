@@ -4,7 +4,7 @@
 
     <groupId>com.wesleyhome</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Wesleyhome Parent</name>
     <description>Parent project for all Wesleyhome Open Source projects</description>
