@@ -58,6 +58,9 @@ jobs:
       MAVEN_OPTS: -Xmx3200m
 
     steps:
+      - run: git config user.email "justin@wesleyhome.com"
+      - run: git config user.name "Justin Wesley"
+      - run: git config --global credential.helper cache
       - checkout
 
       # Download and cache dependencies
@@ -67,12 +70,11 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - wesleyhome-parent-release-
 
-      - run: git config user.email "justin@wesleyhome.com"
-      - run: git config user.name "Justin Wesley"
       - run: mvn -s .circleci.settings.xml dependency:go-offline
 
       - save_cache:
           paths:
             - ~/.m2
           key: wesleyhome-parent-release-{{ checksum "pom.xml" }}
+
       - run: mvn -s .circleci.settings.xml -B release:prepare release:perform
