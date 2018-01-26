@@ -151,14 +151,13 @@
                     </rules>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-release-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<username>${env.GITHUB_USER}</username>-->
-                    <!--<password>${env.GITHUB_PASSWORD}</password>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <arguments>-s .circleci.settings.xml</arguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <distributionManagement>
