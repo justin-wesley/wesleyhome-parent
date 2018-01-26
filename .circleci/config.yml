@@ -67,6 +67,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - wesleyhome-parent-
 
+      - run: git config user.email "justin@wesleyhome.com"
+      - run: git config user.name "Justin Wesley"
+
       - run: mvn -s .circleci.settings.xml -B release:prepare release:perform
 
       - save_cache:
