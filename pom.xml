@@ -157,7 +157,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <username>justin-wesley</username>
-                    <password>$3exTM3VD*tJ@Eh</password>
+                    <password>a7e68215ee314e1a17781f01214a3d29719f2b60</password>
                 </configuration>
             </plugin>
         </plugins>
