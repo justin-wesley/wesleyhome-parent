@@ -7,6 +7,16 @@
             <username>${env.BINTRAY_USER}</username>
             <password>${env.BINTRAY_API_KEY}</password>
         </server>
+        <server>
+            <id>github.com</id>
+            <username>${env.GITHUB_USER}</username>
+            <password>${env.GITHUB_PASSWORD}</password>
+        </server>
+        <server>
+            <id>ossrh</id>
+            <username>${env.OSS_USER}</username>
+            <password>${env.OSS_PASSWORD}</password>
+        </server>
     </servers>
     <localRepository>./repo</localRepository>
     <profiles>

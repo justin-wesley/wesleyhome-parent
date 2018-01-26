@@ -9,6 +9,13 @@ workflows:
     jobs:
       - build:
           context: org-global
+      - hold:
+          type: approval
+          requires:
+            - build
+      - release:
+          requires:
+            - hold
 jobs:
   build:
     docker:
@@ -38,4 +45,31 @@ jobs:
           paths:
             - ~/.m2
           key: wesleyhome-parent-{{ checksum "pom.xml" }}
+  release:
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:9-jdk
 
+
+    working_directory: ~/wesleyhome-parent
+
+    environment:
+      # Customize the JVM maximum heap limit
+      MAVEN_OPTS: -Xmx3200m
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - wesleyhome-parent-{{ checksum "pom.xml" }}
+          # fallback to using the latest cache if no exact match is found
+          - wesleyhome-parent-
+
+      - run: mvn -s .circleci.settings.xml -B release:prepare release:perform
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: wesleyhome-parent-{{ checksum "pom.xml" }}
