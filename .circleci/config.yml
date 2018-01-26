@@ -69,7 +69,6 @@ jobs:
 
       - run: git config user.email "justin@wesleyhome.com"
       - run: git config user.name "Justin Wesley"
-      - run: printenv GITHUB_USER
 
       - run: mvn -s .circleci.settings.xml -B release:prepare release:perform
 
