@@ -44,7 +44,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/.m2
+            - ./repo
           key: wesleyhome-parent-{{ checksum "pom.xml" }}
   release:
     docker:
@@ -75,7 +75,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/.m2
+            - ./repo
           key: wesleyhome-parent-release-{{ checksum "pom.xml" }}
 
       - run: mvn -s .circleci.settings.xml -B release:prepare release:perform
