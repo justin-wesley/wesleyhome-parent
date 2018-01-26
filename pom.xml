@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wesleyhome</groupId>
@@ -156,7 +157,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <username>justin-wesley</username>
-                    <password>$352H81Ac%*j</password>
+                    <password>$3exTM3VD*tJ@Eh</password>
                 </configuration>
             </plugin>
         </plugins>
@@ -173,11 +174,10 @@
         </repository>
     </distributionManagement>
     <scm>
-        <connection>scm:git:git://github.com/justin-wesley/wesleyhome-parent.git</connection>
-        <developerConnection>scm:git:git://github.com/justin-wesley/wesleyhome-parent.git</developerConnection>
+        <connection>scm:git:https://github.com/justin-wesley/wesleyhome-parent.git</connection>
+        <developerConnection>scm:git:https://github.com/justin-wesley/wesleyhome-parent.git</developerConnection>
         <url>https://github.com/justin-wesley/wesleyhome-parent</url>
-      <tag>parent-1.0.0</tag>
-  </scm>
+    </scm>
     <profiles>
         <profile>
             <id>jdk8</id>
@@ -185,7 +185,7 @@
                 <jdk>1.8</jdk>
             </activation>
             <properties>
-                <module.name />
+                <module.name/>
             </properties>
             <build>
                 <pluginManagement>
