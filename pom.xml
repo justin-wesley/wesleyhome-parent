@@ -4,7 +4,7 @@
 
     <groupId>com.wesleyhome</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
     <name>Wesleyhome Parent</name>
     <description>Parent project for all Wesleyhome Open Source projects</description>
@@ -179,7 +179,7 @@
         <connection>scm:git:https://github.com/justin-wesley/wesleyhome-parent.git</connection>
         <developerConnection>scm:git:https://github.com/justin-wesley/wesleyhome-parent.git</developerConnection>
         <url>https://github.com/justin-wesley/wesleyhome-parent</url>
-      <tag>HEAD</tag>
+      <tag>parent-1.0.2</tag>
   </scm>
     <profiles>
         <profile>
