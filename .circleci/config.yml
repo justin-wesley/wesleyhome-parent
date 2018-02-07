@@ -9,8 +9,8 @@ workflows:
     jobs:
       - build:
           context: org-global
-      - release:
-          context: org-global
+#      - release:
+#          context: org-global
 jobs:
   build:
     docker:
