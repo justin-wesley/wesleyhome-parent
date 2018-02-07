@@ -9,10 +9,6 @@ workflows:
     jobs:
       - build:
           context: org-global
-          filters:
-            branches:
-              only:
-                - development
 jobs:
   build:
     docker:
