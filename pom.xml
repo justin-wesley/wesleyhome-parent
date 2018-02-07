@@ -138,6 +138,11 @@
                         <version>${junit.jupiter.version}</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <printSummary>false</printSummary>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <forkCount>0</forkCount>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

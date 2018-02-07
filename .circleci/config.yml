@@ -9,14 +9,8 @@ workflows:
     jobs:
       - build:
           context: org-global
-#      - hold:
-#          type: approval
-#          requires:
-#            - build
-#      - release:
-#          context: org-global
-#          requires:
-#            - hold
+      - release:
+          context: org-global
 jobs:
   build:
     docker:
