@@ -32,7 +32,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - wesleyhome-parent-
 
-      - run: mvn -s .circleci.settings.xml deploy
+      - run: mvn -s .circleci.settings.xml deploy -p module
 
       - save_cache:
           paths:
